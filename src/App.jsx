@@ -1,27 +1,38 @@
 import ExoplanetHunter from './components/ExoplanetHunter';
-import './App.css'; // Optional: You can style your app further here
+import LunarBenefits from './components/LunarBenefits';
+import './App.css';
 
 function App() {
   return (
-    <div style={{ background: '#050a1f', minHeight: '100vh', color: 'white' }}>
+    <div style={{ background: '#050a1f', minHeight: '100vh', color: 'white', fontFamily: 'system-ui, sans-serif' }}>
       
-      {/* Hero Section with Video */}
-      <header style={{ position: 'relative', height: '60vh', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      {/* SECTION 1: Hero Video */}
+      <header style={{ position: 'relative', height: '70vh', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <video 
           autoPlay loop muted playsInline 
-          style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6, zIndex: 0 }}
+          style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5, zIndex: 0 }}
         >
-          {/* Ensure your video is in the 'public' folder and named 'landing.mp4' */}
           <source src="/landing.mp4" type="video/mp4" />
         </video>
-        <div style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
-          <h1 style={{ fontSize: '3.5rem', marginBottom: '0.5rem' }}>Project Artemis Compute</h1>
-          <p style={{ fontSize: '1.2rem', color: '#a0aec0' }}>The Zifo Lunar Data Center</p>
+        <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', padding: '0 2rem' }}>
+          <h1 style={{ fontSize: '4rem', marginBottom: '1rem', textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}>
+            Project Artemis Compute
+          </h1>
+          <p style={{ fontSize: '1.5rem', color: '#e2e8f0', maxWidth: '600px', margin: '0 auto' }}>
+            The Zifo Lunar Data Center
+          </p>
         </div>
       </header>
 
-      {/* Main Content */}
-      <main style={{ maxWidth: '800px', margin: '0 auto', padding: '4rem 2rem' }}>
+      {/* SECTION 2: The Presentation (Left-to-Right Scroll) */}
+      <LunarBenefits />
+
+      {/* SECTION 3: The Interactive Game */}
+      <main style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem 2rem 6rem 2rem' }}>
+        <div style={{ marginBottom: '3rem' }}>
+          <h2 style={{ fontSize: '2.5rem', margin: '0 0 1rem 0' }}>Live Simulations</h2>
+          <p style={{ color: '#a0aec0', fontSize: '1.2rem' }}>Test the processing power of the Shackleton Crater cluster below.</p>
+        </div>
         <ExoplanetHunter />
       </main>
 
