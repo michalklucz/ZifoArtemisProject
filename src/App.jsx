@@ -1,5 +1,6 @@
 import ExoplanetHunter from './components/ExoplanetHunter';
 import LunarBenefits from './components/LunarBenefits';
+import SeleneRoadmap from './components/SeleneRoadmap'; // <-- Add this import
 import './App.css';
 
 function App() {
@@ -24,10 +25,13 @@ function App() {
         </div>
       </header>
 
-      {/* SECTION 2: The Presentation (Left-to-Right Scroll) */}
+      {/* SECTION 2: Project Selene Pitch & Roadmap (NEW) */}
+      <SeleneRoadmap />
+
+      {/* SECTION 3: The Presentation (Left-to-Right Scroll) */}
       <LunarBenefits />
 
-      {/* SECTION 3: The Interactive Game */}
+      {/* SECTION 4: The Interactive Game */}
       <main style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem 2rem 6rem 2rem' }}>
         <div style={{ marginBottom: '3rem' }}>
           <h2 style={{ fontSize: '2.5rem', margin: '0 0 1rem 0' }}>Live Simulations</h2>
